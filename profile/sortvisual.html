@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> My Web Page</title>
+    <title>Sorting Algorithm Visualization</title>
     <link type="text/css" rel="stylesheet" href="styleSheet.css" />
     <!--<style type="text/css" media="screen">
         canvas, img {
@@ -16,7 +16,7 @@
 <body>
     <center>
         <div style="background-color:orange; border:5px; height:50px; width:auto"></div>
-        <h1 style="color:blue">Viet Nguyen<br />TCSS 598A<br />Sorting Algorithm Visualization</h1>
+        <h1 style="color:blue">Viet Nguyen<br />TCSS 598A - Fall 2015<br />Prof. Ali <br />Sorting Algorithm Visualization</h1>
         <p></p>
         <p></p>
        <!-- <img src="me.png"> </> --> 
@@ -27,6 +27,7 @@
     <center>
         <table>
             <thead>
+                <tr> <th colspan="4" style="color:darkviolet; font-size:x-large"><center><u>Data Sets(higher bar = higher value)<br /></u> * </center></th></tr>
                 <tr>
                     <th></th>
                     <th style="color:darkviolet; font-size:large"><center>Buildings-Random and Some Unique</center></th>
@@ -45,25 +46,25 @@
                 
                 <tr>
                     <td><center><strong>Insertion Sort</strong></center></td>
-                    <td><center><iframe width="300" height="188" src="insertionSortR.mp4" frameborder="0" allowfullscreen></iframe></center></td>
-                    <td><center><iframe width="300" height="188" src="insertionSortP.mp4" frameborder="0" allowfullscreen></iframe></center></td>
+                    <td><center><video width="300" height="188" controls muted autoplay> <source src="insertionSortR.mp4" type="video/mp4"></video></center></td>
+                    <td><center><video width="300" height="188" controls muted autoplay> <source src="insertionSortP.mp4" type="video/mp4"></video></center></td>
                     <td><center><video width="300" height="188" controls muted autoplay> <source src="insertionSortStair.mp4" type="video/mp4"></video></center></td>
                 </tr>
                 <tr><td colspan="4" style="color:darkblue"> <center>Insert value from right to left until it is smaller than the left of it</center></td></tr>
                 
                 <tr>
                     <td><center><strong>Bubble Sort</strong></center></td>
-                    <td><center><iframe width="300" height="188" src="bubbleSortR.mp4" frameborder="0" allowfullscreen></iframe></center></td>
-                    <td><center><iframe width="300" height="188" src="bubbleSortP.mp4" frameborder="0" allowfullscreen></iframe></center></td>
+                    <td><center><video width="300" height="188" controls muted autoplay> <source src="bubbleSortR.mp4" type="video/mp4"></video></center></td>
+                    <td><center><video width="300" height="188" controls muted autoplay> <source src="bubbleSortP.mp4" type="video/mp4"></video></center></td>
                     <td><center><video width="300" height="188" controls muted autoplay> <source src="bubbleSortStair.mp4" type="video/mp4"></video></center></td>
                 </tr>
                 <tr><td colspan="4" style="color:darkblue"> <center>From the left find greatest value and move it to the end right before the already sorted values then repeat </center></td></tr>
                
                  <tr>
                     <td><center><strong>Merge Sort</strong></center></td>
-                    <td><center><iframe width="300" height="188" src="mergeSortR.mp4" frameborder="0" allowfullscreen></iframe></center></td>
-                    <td><center><iframe width="300" height="188" src="mergeSortP1.mp4" frameborder="0" allowfullscreen></iframe></center></td>
-                    <td><center><video width="300" height="188" controls muted autoplay> <source src="mergeSortStair.mp4" type="video/mp4"></video></center></td>
+                     <td><center><video width="300" height="188" controls muted autoplay> <source src="mergeSortR.mp4" type="video/mp4"></video></center></td>
+                     <td><center><video width="300" height="188" controls muted autoplay> <source src="mergeSortP.mp4" type="video/mp4"></video></center></td>
+                     <td><center><video width="300" height="188" controls muted autoplay> <source src="mergeSortStair.mp4" type="video/mp4"></video></center></td>
                 </tr>
                 <tr><td colspan="4" style="color:darkblue"> <center>Recusive spliting into 2 half pieces and then back merging the 2 pieces</center></td></tr>
 
@@ -73,17 +74,33 @@
                     <td><center><video width="300" height="188" controls muted autoplay> <source src="quickSortP.mp4" type="video/mp4"></video></center></td>
                     <td><center><video width="300" height="188" controls muted autoplay> <source src="quickSortStair.mp4" type="video/mp4"></video></center></td>
                 </tr>
-                <tr><td colspan="4" style="color:darkblue"> <center>Pick a value from the most right then move all values to right of it if it is smallers and to the left if it greater then repeat recusively its left and right sides of it</center></td></tr>
+                <tr><td colspan="4" style="color:darkblue"> <center>Pick a value from the most right then move all values to right of it if it is smallers and to the left if it greater then repeat recusively its left and right sides of it <br /> ------ <br /> --</center></td></tr>
+               
+                 <tr>
+                     <td style="color:red; font-size:large" ><center><trong>Results:</trong></center></td>
+                     <td>Quick Sort is the fastest and comparable to merges sort since <br /> they both are doing N time comparation for each of half <br />  piece data size  that result in N*log(n) run time in total while <br /> other  sorts have to check all the elements and do the comparation <br /> for a whole size data size</td>
+                     <td>In general Merge Sort runs fastest it spliting data into many <br /> half pieces and at the smallest size it is automaticall sorted <br /> and the merging only take N time because the 2 half pieces are <br />already sorted therefore total runtime is Nlog(N) time</td>
+                     <td>Insertion Sort is the best since it only need to check 1 value <br /> before it and skip ALL insertion steps</td>
+                </tr>
+                <tr>
+                    <td style="color:red; font-size:large"><u>Conclusion:</u> </td>
+                    <td colspan="4" style="color:blue">Merge Sort is the best regardless to whether data is unique, unsorted, sorted, or various data type. It always do the similar fast run time which is N(for merging) * logN (spliting)</td>  
+                </tr>
 
             </tbody>
         </table>
+
+
         <p></p>
         <p>**************************************</p>
+        <p></p>
         <a href="https://github.com/vnguyen15/vnguyen15.github.io/tree/https-/github.com/vnguyen15/vnguyen15.github.io.git/profile"<p style="font-size:larger"><strong>My GitHub(source codes and videos)</strong></p>
         <p><strong>References:</strong></p>
         <a href="https://github.com/vbohush/SortingAlgorithmAnimations"><p>GUI and Viualization Demonstration</p></a>
         <p></p>
         <p>**************************************</p>
+            <p>***</p>
+            <p>*</p>
     </center>
     <!-- Academic List-->
 </body>
